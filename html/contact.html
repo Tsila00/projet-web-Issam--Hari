@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My EFREI</title>
+</head>
+<body>
+
+<header>
+  <div class="header">
+    <div class="nav-bar">
+
+      <!-- Logo à gauche -->
+      <a href="Accueil.html">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Logo_Efrei_2022.svg/1280px-Logo_Efrei_2022.svg.png"
+             height="25" alt="Logo EFREI">
+      </a>
+
+      <!-- Menu à droite -->
+      <div class="menu">
+        <a href="Accueil.html" class="nav-barre">Accueil</a>
+        <a href="cours-formation.html" class="nav-barre">Cours &amp; Formations</a>
+        <a href="equipe-enseignante.html" class="nav-barre">Équipe Enseignante</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<main class="contact-page">
+  <section class="contact-hero">
+    <div class="contact-hero-content">
+      <span class="contact-badge">Contact</span>
+      <h1>Contactez le Département Informatique</h1>
+      <p>Que vous soyez candidat, étudiant ou entreprise, notre équipe vous accompagne. Délai indicatif de réponse : 48h ouvrées.</p>
+      <div class="contact-hero-highlights">
+        <div class="highlight">
+          <h3>Orientation rapide</h3>
+          <p>Un premier retour clair pour vous guider dans vos choix de formation.</p>
+        </div>
+        <div class="highlight">
+          <h3>Suivi personnalisé</h3>
+          <p>Un interlocuteur identifié pour traiter votre demande sans perte d'information.</p>
+        </div>
+        <div class="highlight">
+          <h3>Admissions &amp; alternance</h3>
+          <p>Des parcours adaptés aux candidats, étudiants et entreprises partenaires.</p>
+        </div>
+      </div>
+
+
+  <section class="contact-grid">
+    <div class="contact-info">
+      <div class="info-card">
+        <h3>Coordonnées</h3>
+        <ul class="info-list">
+          <li>
+            <span>Adresse</span>
+            <div>30-32 Avenue de la République<br>94800 Villejuif, France</div>
+          </li>
+          <li>
+            <span>Téléphone</span>
+            <div>+33 1 46 77 47 47 47</div>
+          </li>
+          <li>
+            <span>Email</span>
+            <div>contact@efrei.fr</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Horaires d'accueil</h3>
+        <ul class="info-list">
+          <li>
+            <span>Lun-Ven</span>
+            <div>09:00 - 18:00</div>
+          </li>
+          <li>
+            <span>Samedi</span>
+            <div>Sur rendez-vous</div>
+          </li>
+          <li>
+            <span>Fermeture</span>
+            <div>Jours fériés</div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Services clés</h3>
+        <p class="info-text">Indiquez votre besoin pour être orienté vers la bonne équipe.</p>
+        <ul class="tag-list">
+          <li>Admissions</li>
+          <li>Scolarité</li>
+          <li>Alternance &amp; stages</li>
+          <li>Relations entreprises</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Avant de nous écrire</h3>
+        <p class="info-text">Préparez les informations suivantes pour un traitement plus rapide.</p>
+        <ul class="check-list">
+          <li>Votre profil et niveau actuel</li>
+          <li>Le programme visé</li>
+          <li>Vos disponibilités de contact</li>
+          <li>Tout document utile (CV, portfolio, etc.)</li>
+        </ul>
+      </div>
+    </div>
+
+    <form class="contact-form" action="contact_submit.php" method="post">
+      <div class="form-header">
+        <h2>Envoyer un message</h2>
+        <p>Les champs marqués d'un * sont obligatoires.</p>
+      </div>
+      <div class="form-grid">
+        <div class="form-field">
+          <label for="prenom">Prénom *</label>
+          <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+        </div>
+        <div class="form-field">
+          <label for="nom">Nom *</label>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="prenom.nom@email.com" required>
+        </div>
+        <div class="form-field">
+          <label for="telephone">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone" placeholder="+33 6 12 34 56 78">
+        </div>
+        <div class="form-field">
+          <label for="profil">Profil *</label>
+          <select id="profil" name="profil" required>
+            <option value="">Sélectionner</option>
+            <option value="candidat">Candidat</option>
+            <option value="etudiant">Étudiant</option>
+            <option value="entreprise">Entreprise</option>
+            <option value="presse">Presse</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="sujet">Sujet *</label>
+          <select id="sujet" name="sujet" required>
+            <option value="">Sélectionner</option>
+            <option value="admissions">Admissions</option>
+            <option value="alternance">Alternance / Stage</option>
+            <option value="programme">Programme &amp; cours</option>
+            <option value="partenariat">Partenariat</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div class="form-field full">
+          <label for="programme">Programme ou niveau visé</label>
+          <input type="text" id="programme" name="programme" placeholder="Ex: Bachelor, Cycle Ingénieur, M1, M2">
+        </div>
+        <div class="form-field full">
+          <label for="message">Votre message *</label>
+          <textarea id="message" name="message" rows="6" placeholder="Décrivez votre besoin, vos attentes, et vos disponibilités." required></textarea>
+        </div>
+        <div class="form-field full">
+          <label class="checkbox">
+            <input type="checkbox" required>
+            J'accepte d'être recontacté(e) par l'équipe EFREI.
+          </label>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="form-submit">Envoyer la demande</button>
+        <p class="form-note">Nous revenons vers vous rapidement avec une proposition adaptée.</p>
+      </div>
+    </form>
+  </section>
+
+  <section class="contact-extra">
+    <div class="extra-card">
+      <h3>Rendez-vous &amp; visites</h3>
+      <p>Vous pouvez demander un échange en visio ou sur place. Indiquez vos disponibilités dans le message.</p>
+      <a class="extra-link" href="cours-formation.html">Découvrir nos formations</a>
+    </div>
+    <div class="extra-card">
+      <h3>FAQ rapide</h3>
+      <ul class="extra-list">
+        <li>Délai de réponse indicatif : 48h ouvrées</li>
+        <li>Entretiens disponibles selon planning</li>
+        <li>Documents utiles : CV, portfolio, relevés</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer">
+
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p>30-32 Avenue de la République<br>
+      94800 Villejuif, France<br>
+      Tél: +33 1 46 77 47 47 47</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Navigation</h3>
+      <a href="Accueil.html">Accueil</a>
+      <a href="cours-formation.html">Cours &amp; Formation</a>
+      <a href="equipe-enseignante.html">Équipe Enseignante</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer-section">
+      <h3>Département d'Informatique</h3>
+      <p>EFREI Paris - École d'ingénieurs généraliste</p>
+      <p>Copyright 2026 EFREI Paris - Département d'Informatique. Tous droits réservés.</p>
+    </div>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
