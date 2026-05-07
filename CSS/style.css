@@ -23,6 +23,18 @@ body {
 .header {
     padding: 12px 25px;
     background-color: rgba(255, 255, 255, 0.55);
+    transition: background-color 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease;
+}
+
+.header.header-scrolled {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    padding: 10px 25px;
+    z-index: 1000;
 }
 
 .nav-bar {
@@ -48,8 +60,14 @@ body {
     transition: 0.3s ease;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu a.active-link {
     color: #649fcc;
+}
+
+.menu a.active-link {
+    border-bottom: 2px solid #649fcc;
+    padding-bottom: 4px;
 }
 
 
@@ -59,7 +77,7 @@ body {
 
 .top-section {
     position: relative;
-    background-image: url("Efrei-plan-strategique.png");
+    background-image: url("../img/Efrei-plan-strategique.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -124,6 +142,40 @@ body {
     gap: 15px;
 }
 
+.quote-section {
+    display: flex;
+    justify-content: center;
+    margin: 35px auto 0;
+    padding: 20px;
+    max-width: 860px;
+}
+
+.quote-card {
+    background: rgba(255,255,255,0.9);
+    border-radius: 18px;
+    padding: 24px 28px;
+    box-shadow: 0 18px 35px rgba(1, 22, 100, 0.08);
+    text-align: center;
+    width: 100%;
+}
+
+.quote-text {
+    font-size: 20px;
+    font-style: italic;
+    color: #0b3c7a;
+    margin-bottom: 18px;
+}
+
+.quote-author {
+    color: #011664;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+#refreshQuote {
+    padding: 10px 20px;
+    font-size: 14px;
+}
 
 /* --- ACCUEILL --- */
 /* ========================================= */
@@ -930,6 +982,35 @@ body {
     box-shadow: none;
 }
 
+#backToTop {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: #0066ff;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    z-index: 1100;
+}
+
+#backToTop.visible {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#backToTop:hover {
+    transform: translateY(-2px);
+}
 
 /* Correction pour mobile */
 @media (max-width: 600px) {
@@ -1200,6 +1281,36 @@ body {
 
 .form-field textarea {
     resize: vertical;
+}
+
+.form-field.invalid input,
+.form-field.invalid select,
+.form-field.invalid textarea,
+.form-field.invalid .checkbox {
+    border-color: #d9534f;
+    box-shadow: 0 0 0 2px rgba(217, 83, 79, 0.16);
+}
+
+.form-field.invalid label,
+.form-field.invalid .checkbox {
+    color: #d9534f;
+}
+
+.error-message {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #d9534f;
+}
+
+.form-success-message {
+    width: 100%;
+    background: #e6f4ea;
+    border: 1px solid #5cb85c;
+    color: #2f6627;
+    padding: 14px 18px;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    text-align: center;
 }
 
 .form-field.full {
